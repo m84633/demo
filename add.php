@@ -16,7 +16,7 @@
 			<td>性別:</td>
 			<td>
 				<select  style="float: left;" id="sex">
-					<option>請選擇</option>
+					<option value=''>請選擇</option>
 					<option value="1">男</option>
 					<option value="0">女</option>
 				</select>
@@ -35,7 +35,7 @@
 			<td><input id="email" type="text"></td>
 		</tr>
 		<tr>
-			<td><button disabled="1" id="submit">提交</button></td>
+			<td><button disabled='1' id="submit">提交</button></td>
 			<td></td>
 		</tr>
 	</table>
@@ -49,7 +49,7 @@
 		//validate
 		function validate(){
 			if(phone == 1 && sex ==1 && phone == 1 && address == 1 && email == 1){
-				$("#submit").attr('disabled',false)
+				$("#submit").prop('disabled',false)
 			}
 		}
 		//姓名
@@ -61,7 +61,7 @@
 			}else{
 				$("#alert").text('請輸入姓名')
 				name = 0
-				$("#submit").attr('disabled',true)
+				$("#submit").prop('disabled',true)
 			}
 		})
 		//地址
@@ -73,7 +73,7 @@
 			}else{
 				$("#alert").text('請輸入地址')
 				address = 0
-				$("#submit").attr('disabled',true)
+				$("#submit").prop('disabled',true)
 			}
 		})
 		//性別
@@ -85,7 +85,7 @@
 			}else{
 				$("#alert").text('請選擇性別')
 				sex = 0
-				$("#submit").attr('disabled',true)
+				$("#submit").prop('disabled',true)
 			}
 		})
 		//電話
@@ -95,7 +95,7 @@
 			if(!result){
 				$("#alert").text('手機格式錯誤:09XX-XXXXXX')
 				phone = 0
-				$("#submit").attr('disabled',true)
+				$("#submit").prop('disabled',true)
 			}else{
 				$("#alert").text('')
 				phone = 1
@@ -109,7 +109,7 @@
 			if(!result){
 				$("#alert").text('E-mail格式錯誤')
 				email = 0
-				$("#submit").attr('disabled',true)
+				$("#submit").prop('disabled',true)
 			}else{
 				$("#alert").text('')
 				email = 1

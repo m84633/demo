@@ -19,7 +19,7 @@
 		//validate
 		function validate(){
 			if(phone == 1 && sex ==1 && phone == 1 && address == 1 && email == 1){
-				$("#submit").attr('disabled',false)
+				$("#submit").prop('disabled',false)
 			}
 		}
 		//姓名
@@ -31,7 +31,7 @@
 			}else{
 				$("#alert").text('請輸入姓名')
 				name = 0
-				$("#submit").attr('disabled',true)
+				$("#submit").prop('disabled',true)
 			}
 		})
 		//地址
@@ -43,7 +43,7 @@
 			}else{
 				$("#alert").text('請輸入地址')
 				address = 0
-				$("#submit").attr('disabled',true)
+				$("#submit").prop('disabled',true)
 			}
 		})
 		//性別
@@ -55,7 +55,7 @@
 			}else{
 				$("#alert").text('請選擇性別')
 				sex = 0
-				$("#submit").attr('disabled',true)
+				$("#submit").prop('disabled',true)
 			}
 		})
 		//電話
@@ -66,7 +66,7 @@
 			if(!result){
 				$("#alert").text('手機格式錯誤:09XX-XXXXXX')
 				phone = 0
-				$("#submit").attr('disabled',true)
+				$("#submit").prop('disabled',true)
 			}else{
 				$("#alert").text('')
 				phone = 1

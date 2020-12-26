@@ -15,7 +15,7 @@
 				<td>性別:</td>
 				<td>
 					<select id="sex"  style="float: left;" name="sex" >
-						<option>請選擇</option>
+						<option value=" ">請選擇</option>
 						<option value="1" <?php
 							if($result['sex'] == 1){
 								echo "selected";
