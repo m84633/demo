@@ -5,6 +5,6 @@ include("connection/cnn.php");
 		$sql_query = "UPDATE user SET name=:name,sex =:sex,phone=:phone,address=:address,email=:email WHERE id={$_POST['id']}";
 		$stmt = $link -> prepare($sql_query);
 		$stmt -> execute($data);
-		header("Location:http://localhost/index.php");
+		header("Location:http://demo.airkim.tw/index.php");
 	}
  ?>

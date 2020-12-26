@@ -90,7 +90,7 @@
 		})
 		//電話
 		$("#phone").on("change",function(){
-			var reg = /^09[0-9]{2}-[0-9]{6}/
+			var reg = /^09[0-9]{2}-[0-9]{6}$/
 			var result = reg.test($("#phone").val())
 			if(!result){
 				$("#alert").text('手機格式錯誤:09XX-XXXXXX')
@@ -134,7 +134,7 @@
 				success : function(response){
 					console.log(response)
 					if(response['status'] == "ok"){
-						location.href = 'http://localhost/index.php';
+						location.href = 'http://demo.airkim.tw/index.php';
 					}
 
 				}
